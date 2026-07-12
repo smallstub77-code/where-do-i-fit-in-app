@@ -115,7 +115,122 @@ button:disabled{
   opacity:.4;
   cursor:not-allowed;
 }
+.intro-section {
+  padding: 38px;
+}
 
+.intro-section > p {
+  max-width: 760px;
+}
+
+.intro-lead {
+  color: var(--blue-dark);
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.intro-item {
+  padding: 18px 20px;
+  background: var(--grey-light);
+  border-radius: 10px;
+  border-left: 4px solid var(--cerulean);
+}
+
+.intro-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--blue-dark);
+}
+
+.intro-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.faq-section {
+  padding: 0;
+  overflow: hidden;
+}
+
+.faq-section h2 {
+  padding: 30px 30px 12px;
+  margin: 0;
+}
+
+.faq-intro {
+  padding: 0 30px 22px;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+details {
+  border-top: 1px solid var(--grey-border);
+}
+
+summary {
+  position: relative;
+  padding: 20px 54px 20px 30px;
+  color: var(--blue-dark);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  position: absolute;
+  top: 16px;
+  right: 30px;
+  color: var(--cerulean);
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+details[open] summary::after {
+  content: "−";
+}
+
+details p {
+  margin: 0;
+  padding: 0 30px 22px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 650px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-section {
+    padding: 28px 24px;
+  }
+
+  .faq-section h2,
+  .faq-intro,
+  summary,
+  details p {
+    padding-left: 24px;
+  }
+
+  summary {
+    padding-right: 50px;
+  }
+
+  summary::after {
+    right: 24px;
+  }
+}
 </style>
 </head>
 
@@ -158,90 +273,116 @@ stroke-linecap="round"
 <p class="subtitle">
 Accurate and consistent measurements are essential for meaningful statistical comparisons.
 </p>
-  <section>
+<section class="intro-section">
 
-<h2>Why Measurement Methodology Matters</h2>
+  <h2>Why Measurement Methodology Matters</h2>
 
-<p>
-The purpose of this project is to compare your measurements with published scientific reference data.
-</p>
+  <p class="intro-lead">
+    This report compares your measurements with published scientific reference
+    data. Meaningful comparisons require a consistent measurement method.
+  </p>
 
-<p>
-For this comparison to be meaningful, measurements should be taken using methods that are as consistent as possible with those used in scientific research.
-</p>
+  <p>
+    Small differences in technique can change the recorded value. Measuring from
+    the skin surface, for example, may produce a different result from measuring
+    from the pubic bone. The instructions below are designed to make your
+    measurements as accurate, reproducible, and comparable as reasonably
+    possible.
+  </p>
 
-<p>
-Even small differences in technique can affect the results. For example, measuring from the skin surface rather than from the pubic bone may produce a different value than the bone-pressed method commonly used in research studies.
-</p>
+  <div class="intro-grid">
 
-<p>
-The instructions below are designed to help you obtain measurements that are accurate, reproducible, and comparable with the reference data used by this project.
-</p>
+    <div class="intro-item">
+      <strong>Measure, do not estimate</strong>
+      <p>Use measurements taken specifically for this report.</p>
+    </div>
 
-<ul>
-<li>Measure carefully rather than estimating.</li>
-<li>Record values as accurately as practical.</li>
-<li>Repeat a measurement if you are uncertain.</li>
-<li>Use actual measurements rather than memory or approximation.</li>
-</ul>
+    <div class="intro-item">
+      <strong>Record precise values</strong>
+      <p>Use decimals when appropriate rather than excessive rounding.</p>
+    </div>
 
-<p>
-The quality of the statistical report depends on the quality of the submitted measurements.
-</p>
+    <div class="intro-item">
+      <strong>Repeat when uncertain</strong>
+      <p>Take the measurement again if the first result seems unclear.</p>
+    </div>
 
-</section>
+    <div class="intro-item">
+      <strong>Follow one method</strong>
+      <p>Use the bone-pressed method for every length measurement.</p>
+    </div>
 
-<section>
+  </div>
 
-<h2>Frequently Asked Questions</h2>
-
-<h3>Do I need professional measuring tools?</h3>
-
-<p>
-No. A standard ruler for length measurements and a flexible measuring tape for circumference measurements are sufficient.
-</p>
-
-<h3>What if I do not have a flexible measuring tape?</h3>
-
-<p>
-You may use a non-stretch string, ribbon, or strip of paper. Wrap it around the shaft, mark the overlap point, then measure the resulting length with a ruler.
-</p>
-
-<p>
-Avoid elastic materials, as they may produce inaccurate measurements.
-</p>
-
-<h3>Should measurements be rounded?</h3>
-
-<p>
-Small decimal values are acceptable and may improve accuracy.
-</p>
-
-<h3>How precise do measurements need to be?</h3>
-
-<p>
-Measurements do not need to be perfect. Small differences of a few millimetres are unlikely to meaningfully affect the interpretation of the results.
-</p>
-
-<p>
-The goal is reasonable accuracy and consistency rather than absolute precision.
-</p>
-
-<h3>Should I measure more than once?</h3>
-
-<p>
-If you are uncertain, repeating a measurement and using the average value may improve reliability.
-</p>
+  <p class="note">
+    <strong>Why this matters:</strong> the quality of the statistical report
+    depends on the quality and consistency of the submitted measurements.
+  </p>
 
 </section>
 
-</header>
 
-<main>
+<section class="faq-section">
 
-<section>
+  <h2>Practical Questions</h2>
 
-<h2>Understanding the Bone-Pressed Method</h2>
+  <p class="faq-intro">
+    Open a question below if you need clarification before measuring.
+  </p>
+
+  <details>
+    <summary>Do I need professional measuring tools?</summary>
+    <p>
+      No. A rigid ruler for length measurements and a flexible measuring tape
+      for circumference measurements are sufficient.
+    </p>
+  </details>
+
+  <details>
+    <summary>What if I do not have a flexible measuring tape?</summary>
+    <p>
+      Use a non-stretch string, ribbon, or strip of paper. Wrap it around the
+      midpoint of the shaft, mark the point where the ends meet, and measure
+      that length with a ruler. Do not use elastic material.
+    </p>
+  </details>
+
+  <details>
+    <summary>Should measurements be rounded?</summary>
+    <p>
+      Small decimal values are acceptable. Record the value as accurately as
+      practical, without claiming more precision than your measuring tool
+      allows.
+    </p>
+  </details>
+
+  <details>
+    <summary>How precise do measurements need to be?</summary>
+    <p>
+      Reasonable accuracy and consistency matter more than absolute perfection.
+      A difference of a few millimetres will usually have only a limited effect
+      on the overall interpretation.
+    </p>
+  </details>
+
+  <details>
+    <summary>Should I measure more than once?</summary>
+    <p>
+      Yes, if you are uncertain. Repeat the measurement under the same
+      conditions and use the average if the results differ slightly.
+    </p>
+  </details>
+
+  <details>
+    <summary>Can I use inches?</summary>
+    <p>
+      Yes. The measurement form will allow either centimetres or inches. The
+      system will convert values internally for statistical calculation and
+      show both units in the final report.
+    </p>
+  </details>
+
+</section>
 
 <p>
 Scientific studies typically use the bone-pressed method because it provides a consistent anatomical reference point.
