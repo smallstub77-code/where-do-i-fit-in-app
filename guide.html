@@ -1,511 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Measurement Guide | Where Do I Fit In?</title>
+  <title>Measurement Guide | Where Do I Fit In?</title>
 
-<style>
+  <style>
+    :root {
+      --blue-dark: #1e3a5f;
+      --blue-grey: #6d8ca6;
+      --cerulean: #3f8fbf;
+      --yellow: #d9c36a;
+      --grey-light: #f3f5f7;
+      --grey-border: #dce3e8;
+      --text: #172033;
+      --text-muted: #657286;
+      --white: #ffffff;
+    }
 
-:root{
-  --blue-dark:#1e3a5f;
-  --blue-grey:#6d8ca6;
-  --cerulean:#3f8fbf;
-  --yellow:#d9c36a;
-  --grey-light:#f3f5f7;
-  --grey-border:#dce3e8;
-  --text:#172033;
-  --text-muted:#657286;
-  --white:#ffffff;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-*{
-  box-sizing:border-box;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--grey-light);
+      line-height: 1.7;
+    }
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--grey-light);
-  color:var(--text);
-  line-height:1.7;
-}
+    header {
+      padding: 50px 24px 42px;
+      text-align: center;
+      background: var(--white);
+      border-bottom: 1px solid var(--grey-border);
+    }
 
-header{
-  background:white;
-  padding:50px 24px;
-  text-align:center;
-  border-bottom:1px solid var(--grey-border);
-}
+    .logo {
+      width: 190px;
+      margin: 0 auto 18px;
+    }
 
-.logo{
-  width:190px;
-  margin:auto;
-}
+    .logo svg {
+      width: 100%;
+      display: block;
+    }
 
-.logo svg{
-  width:100%;
-}
+    h1,
+    h2,
+    h3 {
+      color: var(--blue-dark);
+    }
 
-h1{
-  margin:20px 0 10px;
-  color:var(--blue-dark);
-}
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 3.7rem);
+      line-height: 1.1;
+    }
 
-.subtitle{
-  color:var(--blue-grey);
-}
+    .subtitle {
+      max-width: 760px;
+      margin: 14px auto 0;
+      color: var(--blue-grey);
+      font-size: 1.15rem;
+    }
 
-main{
-  max-width:950px;
-  margin:auto;
-  padding:50px 24px 80px;
-}
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
 
-section{
-  background:white;
-  padding:30px;
-  border-radius:16px;
-  margin-bottom:24px;
-  border:1px solid var(--grey-border);
-}
+    section {
+      margin-bottom: 26px;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid var(--grey-border);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(30, 58, 95, 0.05);
+    }
 
-h2{
-  color:var(--blue-dark);
-  margin-top:0;
-}
+    .summary-card {
+      border-left: 6px solid var(--yellow);
+    }
 
-.diagram{
-  background:var(--grey-light);
-  border-radius:12px;
-  padding:20px;
-  margin:20px 0;
-  text-align:center;
-  color:var(--blue-grey);
-  font-weight:bold;
-}
+    .summary-lead {
+      margin-top: 0;
+      color: var(--blue-dark);
+      font-size: 1.12rem;
+      font-weight: 700;
+    }
 
-.note{
-  border-left:4px solid var(--yellow);
-  padding-left:15px;
-  margin-top:15px;
-}
+    .summary-grid,
+    .practical-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
 
-.checkbox-section{
-  background:white;
-  border:1px solid var(--grey-border);
-  border-radius:16px;
-  padding:30px;
-}
+    .summary-item,
+    .practical-card {
+      padding: 20px;
+      background: var(--grey-light);
+      border-radius: 12px;
+    }
 
-button{
-  margin-top:20px;
-  border:none;
-  background:var(--blue-dark);
-  color:white;
-  padding:14px 28px;
-  border-radius:8px;
-  font-size:1rem;
-  font-weight:bold;
-  cursor:pointer;
-}
+    .summary-item strong,
+    .practical-card h3 {
+      display: block;
+      margin: 0 0 6px;
+      color: var(--blue-dark);
+    }
 
-button:disabled{
-  opacity:.4;
-  cursor:not-allowed;
-}
-.intro-section {
-  padding: 38px;
-}
+    .summary-item p,
+    .practical-card p {
+      margin: 0;
+      color: var(--text-muted);
+    }
 
-.intro-section > p {
-  max-width: 760px;
-}
+    .note {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background: #fbf8e8;
+      border-left: 4px solid var(--yellow);
+      border-radius: 8px;
+      color: var(--blue-dark);
+    }
 
-.intro-lead {
-  color: var(--blue-dark);
-  font-size: 1.12rem;
-  font-weight: 600;
-}
+    .section-intro {
+      margin-top: -4px;
+      color: var(--text-muted);
+    }
 
-.intro-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 26px;
-}
+    .diagram {
+      margin: 20px 0;
+      padding: 28px 20px;
+      text-align: center;
+      color: var(--blue-grey);
+      background: var(--grey-light);
+      border: 1px dashed var(--grey-border);
+      border-radius: 12px;
+      font-weight: 700;
+    }
 
-.intro-item {
-  padding: 18px 20px;
-  background: var(--grey-light);
-  border-radius: 10px;
-  border-left: 4px solid var(--cerulean);
-}
+    .measurement-block {
+      padding: 24px 0;
+      border-top: 1px solid var(--grey-border);
+    }
 
-.intro-item strong {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--blue-dark);
-}
+    .measurement-block:first-of-type {
+      border-top: 0;
+      padding-top: 8px;
+    }
 
-.intro-item p {
-  margin: 0;
-  color: var(--text-muted);
-}
+    .measurement-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--grey-light);
+      color: var(--blue-grey);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
 
-.faq-section {
-  padding: 0;
-  overflow: hidden;
-}
+    .measurement-label.erect {
+      color: var(--blue-dark);
+      background: #e7eef5;
+    }
 
-.faq-section h2 {
-  padding: 30px 30px 12px;
-  margin: 0;
-}
+    .common-mistake {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #f8fafc;
+      border-left: 4px solid var(--cerulean);
+      border-radius: 8px;
+      color: var(--text-muted);
+    }
 
-.faq-intro {
-  padding: 0 30px 22px;
-  margin: 0;
-  color: var(--text-muted);
-}
+    .confidence-options label {
+      display: block;
+      margin: 12px 0;
+    }
 
-details {
-  border-top: 1px solid var(--grey-border);
-}
+    .confirmation-box {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--grey-border);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(30, 58, 95, 0.05);
+    }
 
-summary {
-  position: relative;
-  padding: 20px 54px 20px 30px;
-  color: var(--blue-dark);
-  font-weight: 700;
-  cursor: pointer;
-  list-style: none;
-}
+    .confirmation-box label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
 
-summary::-webkit-details-marker {
-  display: none;
-}
+    .confirmation-box input {
+      margin-top: 5px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--cerulean);
+    }
 
-summary::after {
-  content: "+";
-  position: absolute;
-  top: 16px;
-  right: 30px;
-  color: var(--cerulean);
-  font-size: 1.45rem;
-  font-weight: 400;
-}
+    button {
+      margin-top: 22px;
+      padding: 14px 28px;
+      border: 0;
+      border-radius: 9px;
+      color: var(--white);
+      background: var(--blue-dark);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
 
-details[open] summary::after {
-  content: "−";
-}
+    button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      background: var(--cerulean);
+    }
 
-details p {
-  margin: 0;
-  padding: 0 30px 22px;
-  color: var(--text-muted);
-}
+    button:disabled {
+      opacity: 0.38;
+      cursor: not-allowed;
+    }
 
-@media (max-width: 650px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-  }
+    footer {
+      padding: 28px 24px;
+      text-align: center;
+      color: var(--blue-grey);
+      background: var(--white);
+      border-top: 1px solid var(--grey-border);
+      font-size: 0.9rem;
+    }
 
-  .intro-section {
-    padding: 28px 24px;
-  }
+    @media (max-width: 700px) {
+      .summary-grid,
+      .practical-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .faq-section h2,
-  .faq-intro,
-  summary,
-  details p {
-    padding-left: 24px;
-  }
-
-  summary {
-    padding-right: 50px;
-  }
-
-  summary::after {
-    right: 24px;
-  }
-}
-</style>
+      section,
+      .confirmation-box {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 220 118">
+        <path
+          d="
+            M10 88
+            C34 88, 48 86, 61 73
+            C75 59, 82 29, 110 14
+            C138 29, 145 59, 159 73
+            C172 86, 186 88, 210 88
+          "
+          fill="none"
+          stroke="#1e3a5f"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
 
-<div class="logo">
-
-<svg viewBox="0 0 220 118">
-<path
-d="
-M10 88
-C34 88, 48 86, 61 73
-C75 59, 82 29, 110 14
-C138 29, 145 59, 159 73
-C172 86, 186 88, 210 88
-"
-fill="none"
-stroke="#1e3a5f"
-stroke-width="4"
-stroke-linecap="round"
-/>
-
-<line
-x1="80"
-y1="106"
-x2="140"
-y2="106"
-stroke="#d9c36a"
-stroke-width="4"
-stroke-linecap="round"
-/>
-</svg>
-
-</div>
-
-<h1>Measurement Guide</h1>
-
-<p class="subtitle">
-Accurate and consistent measurements are essential for meaningful statistical comparisons.
-</p>
-<section class="intro-section">
-
-  <h2>Why Measurement Methodology Matters</h2>
-
-  <p class="intro-lead">
-    This report compares your measurements with published scientific reference
-    data. Meaningful comparisons require a consistent measurement method.
-  </p>
-
-  <p>
-    Small differences in technique can change the recorded value. Measuring from
-    the skin surface, for example, may produce a different result from measuring
-    from the pubic bone. The instructions below are designed to make your
-    measurements as accurate, reproducible, and comparable as reasonably
-    possible.
-  </p>
-
-  <div class="intro-grid">
-
-    <div class="intro-item">
-      <strong>Measure, do not estimate</strong>
-      <p>Use measurements taken specifically for this report.</p>
+        <line
+          x1="80"
+          y1="106"
+          x2="140"
+          y2="106"
+          stroke="#d9c36a"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+      </svg>
     </div>
 
-    <div class="intro-item">
-      <strong>Record precise values</strong>
-      <p>Use decimals when appropriate rather than excessive rounding.</p>
+    <h1>Measurement Guide</h1>
+
+    <p class="subtitle">
+      Accurate and consistent measurements are essential for meaningful statistical comparisons.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="summary-card">
+      <h2>Why Measurement Methodology Matters</h2>
+
+      <p class="summary-lead">
+        This report compares your measurements with published scientific reference data.
+        Meaningful comparisons require a consistent measurement method.
+      </p>
+
+      <p>
+        Small differences in technique can influence the recorded value.
+        The instructions below are designed to make your measurements as accurate,
+        reproducible, and comparable as reasonably possible.
+      </p>
+
+      <div class="summary-grid">
+        <div class="summary-item">
+          <strong>Measure, don't estimate</strong>
+          <p>Use measurements taken specifically for this report.</p>
+        </div>
+
+        <div class="summary-item">
+          <strong>Record precise values</strong>
+          <p>Use decimals when appropriate rather than excessive rounding.</p>
+        </div>
+
+        <div class="summary-item">
+          <strong>Repeat when uncertain</strong>
+          <p>Take the measurement again if the first result seems unclear.</p>
+        </div>
+
+        <div class="summary-item">
+          <strong>Use one method</strong>
+          <p>Use the bone-pressed method for every length measurement.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Why this matters:</strong>
+        The quality of the statistical report depends on the quality and consistency of the submitted measurements.
+      </div>
+    </section>
+
+    <section>
+      <h2>Practical Notes</h2>
+
+      <div class="practical-grid">
+        <div class="practical-card">
+          <h3>Measuring Tools</h3>
+          <p>
+            A rigid ruler for length measurements and a flexible measuring tape
+            for circumference measurements are sufficient.
+          </p>
+        </div>
+
+        <div class="practical-card">
+          <h3>No Flexible Tape?</h3>
+          <p>
+            Use a non-stretch string, ribbon, or strip of paper. Mark the overlap
+            and measure it with a ruler. Do not use elastic material.
+          </p>
+        </div>
+
+        <div class="practical-card">
+          <h3>Rounding</h3>
+          <p>
+            Small decimal values are acceptable and may improve accuracy.
+          </p>
+        </div>
+
+        <div class="practical-card">
+          <h3>Precision</h3>
+          <p>
+            Reasonable accuracy and consistency matter more than absolute perfection.
+          </p>
+        </div>
+
+        <div class="practical-card">
+          <h3>Repeat Measurements</h3>
+          <p>
+            If you are uncertain, repeat the measurement and use the average value.
+          </p>
+        </div>
+
+        <div class="practical-card">
+          <h3>Units</h3>
+          <p>
+            The questionnaire will support both centimetres and inches and display both in the final report.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Understanding the Bone-Pressed Method</h2>
+
+      <p class="section-intro">
+        The bone-pressed method uses the pubic bone as the anatomical starting point for length measurements.
+      </p>
+
+      <div class="diagram">
+        [ Bone-Pressed Method Diagram ]
+      </div>
+
+      <p>
+        Place a rigid ruler along the upper side of the penis. Gently press the
+        base of the ruler inward until it reaches the pubic bone, then measure
+        to the tip of the glans.
+      </p>
+
+      <div class="common-mistake">
+        <strong>Common mistake:</strong>
+        measuring from the skin surface instead of the pubic bone.
+      </div>
+    </section>
+
+    <section>
+      <h2>Flaccid Measurements</h2>
+
+      <p class="section-intro">
+        These measurements are taken while the penis is not erect.
+      </p>
+
+      <div class="measurement-block">
+        <span class="measurement-label">FLACCID</span>
+        <h3>Flaccid Length</h3>
+
+        <div class="diagram">
+          [ Flaccid Length Diagram ]
+        </div>
+
+        <p>
+          Measure along the upper side from the pubic bone to the tip of the glans
+          using the bone-pressed method.
+        </p>
+
+        <div class="common-mistake">
+          <strong>Common mistake:</strong>
+          measuring along the underside rather than the upper side.
+        </div>
+      </div>
+
+      <div class="measurement-block">
+        <span class="measurement-label">FLACCID</span>
+        <h3>Stretched Flaccid Length</h3>
+
+        <div class="diagram">
+          [ Stretched Flaccid Length Diagram ]
+        </div>
+
+        <p>
+          While flaccid, gently stretch the penis forward to its maximum comfortable
+          extension. Measure along the upper side using the bone-pressed method.
+        </p>
+
+        <div class="common-mistake">
+          <strong>Common mistake:</strong>
+          pulling forcefully or continuing when discomfort occurs.
+        </div>
+      </div>
+
+      <div class="measurement-block">
+        <span class="measurement-label">FLACCID</span>
+        <h3>Flaccid Girth</h3>
+
+        <div class="diagram">
+          [ Flaccid Girth Diagram ]
+        </div>
+
+        <p>
+          Measure the circumference at the midpoint of the shaft using a flexible
+          measuring tape or a non-stretch substitute.
+        </p>
+
+        <div class="common-mistake">
+          <strong>Common mistake:</strong>
+          measuring at the widest point instead of the midpoint.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Erect Measurements</h2>
+
+      <p class="section-intro">
+        These measurements are taken during a full erection.
+      </p>
+
+      <div class="measurement-block">
+        <span class="measurement-label erect">ERECT</span>
+        <h3>Erect Length</h3>
+
+        <div class="diagram">
+          [ Erect Length Diagram ]
+        </div>
+
+        <p>
+          Measure along the upper side from the pubic bone to the tip of the glans
+          using the bone-pressed method.
+        </p>
+
+        <div class="common-mistake">
+          <strong>Common mistake:</strong>
+          measuring during only a partial erection.
+        </div>
+      </div>
+
+      <div class="measurement-block">
+        <span class="measurement-label erect">ERECT</span>
+        <h3>Erect Girth</h3>
+
+        <div class="diagram">
+          [ Erect Girth Diagram ]
+        </div>
+
+        <p>
+          Measure the circumference at the midpoint of the shaft during a full erection.
+        </p>
+
+        <div class="common-mistake">
+          <strong>Common mistake:</strong>
+          measuring close to the base or close to the glans.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Measurement Confidence</h2>
+
+      <p class="section-intro">
+        How confident are you that the measurements were taken correctly?
+      </p>
+
+      <div class="confidence-options">
+        <label>
+          <input type="radio" name="confidence" value="very">
+          Very confident
+        </label>
+
+        <label>
+          <input type="radio" name="confidence" value="moderate">
+          Moderately confident
+        </label>
+
+        <label>
+          <input type="radio" name="confidence" value="low">
+          Not very confident
+        </label>
+      </div>
+    </section>
+
+    <div class="confirmation-box">
+      <label>
+        <input type="checkbox" id="guideCheck">
+
+        <span>
+          I have read and understood the measurement instructions and confirm
+          that the submitted values will be based on actual measurements.
+        </span>
+      </label>
+
+      <button id="continueButton" disabled>
+        Continue to Measurements
+      </button>
     </div>
 
-    <div class="intro-item">
-      <strong>Repeat when uncertain</strong>
-      <p>Take the measurement again if the first result seems unclear.</p>
-    </div>
+  </main>
 
-    <div class="intro-item">
-      <strong>Follow one method</strong>
-      <p>Use the bone-pressed method for every length measurement.</p>
-    </div>
+  <footer>
+    Educational project &nbsp;•&nbsp; Independent &nbsp;•&nbsp; Non-commercial
+  </footer>
 
-  </div>
+  <script>
+    const guideCheck = document.getElementById("guideCheck");
+    const continueButton = document.getElementById("continueButton");
 
-  <p class="note">
-    <strong>Why this matters:</strong> the quality of the statistical report
-    depends on the quality and consistency of the submitted measurements.
-  </p>
+    guideCheck.addEventListener("change", function () {
+      continueButton.disabled = !guideCheck.checked;
+    });
 
-</section>
-
-
-<section class="faq-section">
-
-  <h2>Practical Questions</h2>
-
-  <p class="faq-intro">
-    Open a question below if you need clarification before measuring.
-  </p>
-
-  <details>
-    <summary>Do I need professional measuring tools?</summary>
-    <p>
-      No. A rigid ruler for length measurements and a flexible measuring tape
-      for circumference measurements are sufficient.
-    </p>
-  </details>
-
-  <details>
-    <summary>What if I do not have a flexible measuring tape?</summary>
-    <p>
-      Use a non-stretch string, ribbon, or strip of paper. Wrap it around the
-      midpoint of the shaft, mark the point where the ends meet, and measure
-      that length with a ruler. Do not use elastic material.
-    </p>
-  </details>
-
-  <details>
-    <summary>Should measurements be rounded?</summary>
-    <p>
-      Small decimal values are acceptable. Record the value as accurately as
-      practical, without claiming more precision than your measuring tool
-      allows.
-    </p>
-  </details>
-
-  <details>
-    <summary>How precise do measurements need to be?</summary>
-    <p>
-      Reasonable accuracy and consistency matter more than absolute perfection.
-      A difference of a few millimetres will usually have only a limited effect
-      on the overall interpretation.
-    </p>
-  </details>
-
-  <details>
-    <summary>Should I measure more than once?</summary>
-    <p>
-      Yes, if you are uncertain. Repeat the measurement under the same
-      conditions and use the average if the results differ slightly.
-    </p>
-  </details>
-
-  <details>
-    <summary>Can I use inches?</summary>
-    <p>
-      Yes. The measurement form will allow either centimetres or inches. The
-      system will convert values internally for statistical calculation and
-      show both units in the final report.
-    </p>
-  </details>
-
-</section>
-
-<p>
-Scientific studies typically use the bone-pressed method because it provides a consistent anatomical reference point.
-</p>
-
-<div class="diagram">
-[ Bone-Pressed Method Diagram ]
-</div>
-
-<div class="note">
-<strong>Common mistake:</strong><br>
-Measuring from the skin surface instead of the pubic bone.
-</div>
-
-</section>
-
-<section>
-
-<h2>Flaccid Measurements</h2>
-
-<h3>Flaccid Length</h3>
-
-<div class="diagram">
-[ Flaccid Length Diagram ]
-</div>
-
-<h3>Stretched Flaccid Length</h3>
-
-<div class="diagram">
-[ Stretched Flaccid Length Diagram ]
-</div>
-
-<h3>Flaccid Girth</h3>
-
-<div class="diagram">
-[ Flaccid Girth Diagram ]
-</div>
-
-</section>
-
-<section>
-
-<h2>Erect Measurements</h2>
-
-<h3>Erect Length</h3>
-
-<div class="diagram">
-[ Erect Length Diagram ]
-</div>
-
-<h3>Erect Girth</h3>
-
-<div class="diagram">
-[ Erect Girth Diagram ]
-</div>
-
-</section>
-
-<section>
-
-<h2>Measurement Confidence</h2>
-
-<label>
-<input type="radio" name="confidence">
- Very confident
-</label>
-
-<br><br>
-
-<label>
-<input type="radio" name="confidence">
- Moderately confident
-</label>
-
-<br><br>
-
-<label>
-<input type="radio" name="confidence">
- Not very confident
-</label>
-
-</section>
-
-<div class="checkbox-section">
-
-<label>
-<input type="checkbox" id="guideCheck">
-
-I have read and understood the measurement instructions and confirm that the submitted values will be based on actual measurements.
-</label>
-
-<br>
-
-<button id="continueButton" disabled>
-Continue to Measurements
-</button>
-
-</div>
-
-</main>
-
-<script>
-
-const guideCheck =
-document.getElementById("guideCheck");
-
-const continueButton =
-document.getElementById("continueButton");
-
-guideCheck.addEventListener("change",function(){
-
-continueButton.disabled =
-!guideCheck.checked;
-
-});
-
-continueButton.addEventListener("click",function(){
-
-alert("Questionnaire page coming next.");
-
-});
-
-</script>
+    continueButton.addEventListener("click", function () {
+      alert("Questionnaire page coming next.");
+    });
+  </script>
 
 </body>
 </html>
