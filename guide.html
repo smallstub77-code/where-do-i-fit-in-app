@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Measurement Guide | Where Do I Fit In?</title>
+
+<style>
+
+:root{
+  --blue-dark:#1e3a5f;
+  --blue-grey:#6d8ca6;
+  --cerulean:#3f8fbf;
+  --yellow:#d9c36a;
+  --grey-light:#f3f5f7;
+  --grey-border:#dce3e8;
+  --text:#172033;
+  --text-muted:#657286;
+  --white:#ffffff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--grey-light);
+  color:var(--text);
+  line-height:1.7;
+}
+
+header{
+  background:white;
+  padding:50px 24px;
+  text-align:center;
+  border-bottom:1px solid var(--grey-border);
+}
+
+.logo{
+  width:190px;
+  margin:auto;
+}
+
+.logo svg{
+  width:100%;
+}
+
+h1{
+  margin:20px 0 10px;
+  color:var(--blue-dark);
+}
+
+.subtitle{
+  color:var(--blue-grey);
+}
+
+main{
+  max-width:950px;
+  margin:auto;
+  padding:50px 24px 80px;
+}
+
+section{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  margin-bottom:24px;
+  border:1px solid var(--grey-border);
+}
+
+h2{
+  color:var(--blue-dark);
+  margin-top:0;
+}
+
+.diagram{
+  background:var(--grey-light);
+  border-radius:12px;
+  padding:20px;
+  margin:20px 0;
+  text-align:center;
+  color:var(--blue-grey);
+  font-weight:bold;
+}
+
+.note{
+  border-left:4px solid var(--yellow);
+  padding-left:15px;
+  margin-top:15px;
+}
+
+.checkbox-section{
+  background:white;
+  border:1px solid var(--grey-border);
+  border-radius:16px;
+  padding:30px;
+}
+
+button{
+  margin-top:20px;
+  border:none;
+  background:var(--blue-dark);
+  color:white;
+  padding:14px 28px;
+  border-radius:8px;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:disabled{
+  opacity:.4;
+  cursor:not-allowed;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<svg viewBox="0 0 220 118">
+<path
+d="
+M10 88
+C34 88, 48 86, 61 73
+C75 59, 82 29, 110 14
+C138 29, 145 59, 159 73
+C172 86, 186 88, 210 88
+"
+fill="none"
+stroke="#1e3a5f"
+stroke-width="4"
+stroke-linecap="round"
+/>
+
+<line
+x1="80"
+y1="106"
+x2="140"
+y2="106"
+stroke="#d9c36a"
+stroke-width="4"
+stroke-linecap="round"
+/>
+</svg>
+
+</div>
+
+<h1>Measurement Guide</h1>
+
+<p class="subtitle">
+Accurate measurements are essential for obtaining meaningful statistical results.
+</p>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Understanding the Bone-Pressed Method</h2>
+
+<p>
+Scientific studies typically use the bone-pressed method because it provides a consistent anatomical reference point.
+</p>
+
+<div class="diagram">
+[ Bone-Pressed Method Diagram ]
+</div>
+
+<div class="note">
+<strong>Common mistake:</strong><br>
+Measuring from the skin surface instead of the pubic bone.
+</div>
+
+</section>
+
+<section>
+
+<h2>Flaccid Measurements</h2>
+
+<h3>Flaccid Length</h3>
+
+<div class="diagram">
+[ Flaccid Length Diagram ]
+</div>
+
+<h3>Stretched Flaccid Length</h3>
+
+<div class="diagram">
+[ Stretched Flaccid Length Diagram ]
+</div>
+
+<h3>Flaccid Girth</h3>
+
+<div class="diagram">
+[ Flaccid Girth Diagram ]
+</div>
+
+</section>
+
+<section>
+
+<h2>Erect Measurements</h2>
+
+<h3>Erect Length</h3>
+
+<div class="diagram">
+[ Erect Length Diagram ]
+</div>
+
+<h3>Erect Girth</h3>
+
+<div class="diagram">
+[ Erect Girth Diagram ]
+</div>
+
+</section>
+
+<section>
+
+<h2>Measurement Confidence</h2>
+
+<label>
+<input type="radio" name="confidence">
+ Very confident
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="confidence">
+ Moderately confident
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="confidence">
+ Not very confident
+</label>
+
+</section>
+
+<div class="checkbox-section">
+
+<label>
+<input type="checkbox" id="guideCheck">
+
+I have read and understood the measurement instructions and confirm that the submitted values will be based on actual measurements.
+</label>
+
+<br>
+
+<button id="continueButton" disabled>
+Continue to Measurements
+</button>
+
+</div>
+
+</main>
+
+<script>
+
+const guideCheck =
+document.getElementById("guideCheck");
+
+const continueButton =
+document.getElementById("continueButton");
+
+guideCheck.addEventListener("change",function(){
+
+continueButton.disabled =
+!guideCheck.checked;
+
+});
+
+continueButton.addEventListener("click",function(){
+
+alert("Questionnaire page coming next.");
+
+});
+
+</script>
+
+</body>
+</html>
