@@ -1,0 +1,219 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 760 320"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Bone-pressed penile length measurement</title>
+
+  <desc id="description">
+    Simplified technical diagram showing a rigid ruler placed along the upper
+    surface and pressed gently against the pubic bone.
+  </desc>
+
+  <defs>
+    <marker
+      id="arrow-blue"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0 L8 4 L0 8 Z" fill="#3f8fbf"/>
+    </marker>
+
+    <marker
+      id="arrow-yellow"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0 L8 4 L0 8 Z" fill="#d9c36a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect
+    x="1"
+    y="1"
+    width="758"
+    height="318"
+    rx="20"
+    fill="#f3f5f7"
+    stroke="#dce3e8"
+    stroke-width="2"
+  />
+
+  <!-- Pubic/body boundary -->
+  <path
+    d="
+      M150 78
+      C174 96 184 121 185 151
+      C186 183 178 214 158 242
+    "
+    fill="none"
+    stroke="#1e3a5f"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <!-- Pubic bone -->
+  <path
+    d="
+      M173 117
+      C182 135 183 157 175 179
+    "
+    fill="none"
+    stroke="#d9c36a"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+
+  <!-- Single-line anatomical outline -->
+  <path
+    d="
+      M186 151
+      L531 151
+
+      C542 151 549 147 555 139
+      C563 128 574 123 588 123
+
+      C610 123 631 132 646 145
+      C655 153 661 163 665 174
+
+      C661 185 655 195 646 203
+      C631 216 610 225 588 225
+
+      C574 225 563 220 555 209
+      C549 201 542 197 531 197
+
+      L186 197
+    "
+    fill="none"
+    stroke="#1e3a5f"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Ruler -->
+  <rect
+    x="172"
+    y="89"
+    width="493"
+    height="34"
+    rx="5"
+    fill="#ffffff"
+    stroke="#1e3a5f"
+    stroke-width="4"
+  />
+
+  <!-- Ruler ticks -->
+  <g stroke="#3f8fbf" stroke-width="2.5">
+    <line x1="208" y1="89" x2="208" y2="105"/>
+    <line x1="244" y1="89" x2="244" y2="114"/>
+    <line x1="280" y1="89" x2="280" y2="105"/>
+    <line x1="316" y1="89" x2="316" y2="114"/>
+    <line x1="352" y1="89" x2="352" y2="105"/>
+    <line x1="388" y1="89" x2="388" y2="114"/>
+    <line x1="424" y1="89" x2="424" y2="105"/>
+    <line x1="460" y1="89" x2="460" y2="114"/>
+    <line x1="496" y1="89" x2="496" y2="105"/>
+    <line x1="532" y1="89" x2="532" y2="114"/>
+    <line x1="568" y1="89" x2="568" y2="105"/>
+    <line x1="604" y1="89" x2="604" y2="114"/>
+    <line x1="640" y1="89" x2="640" y2="105"/>
+  </g>
+
+  <!-- Measurement line -->
+  <line
+    x1="176"
+    y1="55"
+    x2="665"
+    y2="55"
+    stroke="#d9c36a"
+    stroke-width="4"
+    stroke-linecap="round"
+    marker-end="url(#arrow-yellow)"
+  />
+
+  <text
+    x="420"
+    y="36"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="#1e3a5f"
+  >
+    Measure from the pubic bone to the tip
+  </text>
+
+  <!-- Gentle pressure -->
+  <line
+    x1="104"
+    y1="106"
+    x2="167"
+    y2="106"
+    stroke="#3f8fbf"
+    stroke-width="4"
+    stroke-linecap="round"
+    marker-end="url(#arrow-blue)"
+  />
+
+  <text
+    x="105"
+    y="83"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="16"
+    font-weight="700"
+    fill="#3f8fbf"
+  >
+    Press gently
+  </text>
+
+  <!-- Pubic bone label -->
+  <line
+    x1="175"
+    y1="182"
+    x2="175"
+    y2="241"
+    stroke="#d9c36a"
+    stroke-width="3"
+  />
+
+  <circle
+    cx="175"
+    cy="182"
+    r="4"
+    fill="#d9c36a"
+  />
+
+  <text
+    x="175"
+    y="267"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="17"
+    font-weight="700"
+    fill="#1e3a5f"
+  >
+    Pubic bone
+  </text>
+
+  <!-- Method note -->
+  <text
+    x="405"
+    y="297"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14"
+    fill="#657286"
+  >
+    Place the ruler along the upper surface and use the bone as the starting point.
+  </text>
+</svg>
