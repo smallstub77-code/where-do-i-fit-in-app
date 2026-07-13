@@ -603,11 +603,35 @@
 
   <script>
     const guideCheck = document.getElementById("guideCheck");
-    const continueButton = document.getElementById("continueButton");
+const continueButton = document.getElementById("continueButton");
 
-    guideCheck.addEventListener("change", function () {
-      continueButton.disabled = !guideCheck.checked;
-    });
+const confidenceInputs =
+  document.querySelectorAll('input[name="confidence"]');
+
+function updateButtonState() {
+
+  const confidenceSelected =
+    document.querySelector(
+      'input[name="confidence"]:checked'
+    );
+
+  continueButton.disabled =
+    !guideCheck.checked || !confidenceSelected;
+}
+
+guideCheck.addEventListener(
+  "change",
+  updateButtonState
+);
+
+confidenceInputs.forEach(input => {
+  input.addEventListener(
+    "change",
+    updateButtonState
+  );
+});
+
+updateButtonState();
 
     continueButton.addEventListener("click", function () {
       alert("Questionnaire page coming next.");
