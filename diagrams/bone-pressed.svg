@@ -74,31 +74,22 @@
 
   <!-- Single-line anatomical outline -->
   <path
-    d="
-      M186 151
-      L531 151
+  d="
+    M186 134
+    L590 134
 
-      C542 151 549 147 555 139
-      C563 128 574 123 588 123
+    C615 145 632 158 632 174
 
-      C610 123 631 132 646 145
-      C655 153 661 163 665 174
+    C632 190 615 203 590 203
 
-      C661 185 655 195 646 203
-      C631 216 610 225 588 225
-
-      C574 225 563 220 555 209
-      C549 201 542 197 531 197
-
-      L186 197
-    "
-    fill="none"
-    stroke="#1e3a5f"
-    stroke-width="6"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-
+    L186 203
+  "
+  fill="none"
+  stroke="#1e3a5f"
+  stroke-width="6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+/>
   <!-- Ruler -->
   <rect
     x="172"
