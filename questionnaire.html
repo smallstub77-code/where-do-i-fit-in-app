@@ -721,9 +721,107 @@
         return;
       }
 
-      alert(
-        "The questionnaire is valid. Database submission and report generation will be added next."
+      const selectedUnit =
+  document.querySelector('input[name="unit"]:checked').value;
+
+function readMeasurement(input) {
+  if (input.value.trim() === "") {
+    return null;
+  }
+
+  return Number(input.value);
+}
+
+function convertToCentimetres(value) {
+  if (value === null) {
+    return null;
+  }
+
+  return selectedUnit === "in"
+    ? value * 2.54
+    : value;
+}
+
+function generateReportId() {
+  const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+  function randomBlock(length) {
+    let block = "";
+
+    for (let index = 0; index < length; index++) {
+      const randomIndex = Math.floor(
+        Math.random() * characters.length
       );
+
+      block += characters[randomIndex];
+    }
+
+    return block;
+  }
+
+  return `WDFI-${randomBlock(4)}-${randomBlock(4)}`;
+}
+
+const originalMeasurements = {
+  flaccidLength: readMeasurement(
+    document.getElementById("flaccidLength")
+  ),
+
+  stretchedFlaccidLength: readMeasurement(
+    document.getElementById("stretchedFlaccidLength")
+  ),
+
+  flaccidGirth: readMeasurement(
+    document.getElementById("flaccidGirth")
+  ),
+
+  erectLength: readMeasurement(
+    document.getElementById("erectLength")
+  ),
+
+  erectGirth: readMeasurement(
+    document.getElementById("erectGirth")
+  )
+};
+
+const measurementsCm = {
+  flaccidLength: convertToCentimetres(
+    originalMeasurements.flaccidLength
+  ),
+
+  stretchedFlaccidLength: convertToCentimetres(
+    originalMeasurements.stretchedFlaccidLength
+  ),
+
+  flaccidGirth: convertToCentimetres(
+    originalMeasurements.flaccidGirth
+  ),
+
+  erectLength: convertToCentimetres(
+    originalMeasurements.erectLength
+  ),
+
+  erectGirth: convertToCentimetres(
+    originalMeasurements.erectGirth
+  )
+};
+
+const reportData = {
+  reportId: generateReportId(),
+  generatedAt: new Date().toISOString(),
+  ageRange: ageRange,
+  unit: selectedUnit,
+  selfAssessment: selfAssessment.value,
+  originalMeasurements: originalMeasurements,
+  measurementsCm: measurementsCm
+};
+
+sessionStorage.setItem(
+  "wdfiReportData",
+  JSON.stringify(reportData)
+);
+
+window.location.href = "results.html";
     });
   </script>
 
