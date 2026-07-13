@@ -1,0 +1,147 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 760 300"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Erect girth measurement</title>
+
+  <desc id="description">
+    Simplified technical diagram showing the circumference of a fully erect penis
+    measured at the midpoint of the shaft using a flexible measuring tape.
+  </desc>
+
+  <defs>
+    <marker
+      id="arrow-blue"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0 L8 4 L0 8 Z" fill="#3f8fbf"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect
+    x="1"
+    y="1"
+    width="758"
+    height="298"
+    rx="20"
+    fill="#f3f5f7"
+    stroke="#dce3e8"
+    stroke-width="2"
+  />
+
+  <!-- Long erect silhouette -->
+  <path
+    d="
+      M186 134
+      L585 134
+
+      C612 134 632 150 640 174
+
+      C632 198 612 214 585 214
+
+      L186 214
+    "
+    fill="none"
+    stroke="#1e3a5f"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Midpoint guide -->
+  <line
+    x1="385"
+    y1="118"
+    x2="385"
+    y2="230"
+    stroke="#d9c36a"
+    stroke-width="3"
+    stroke-dasharray="7 7"
+  />
+
+  <!-- Measuring tape -->
+  <ellipse
+    cx="385"
+    cy="174"
+    rx="34"
+    ry="62"
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="6"
+  />
+
+  <!-- Closure point -->
+  <circle
+    cx="419"
+    cy="174"
+    r="6"
+    fill="#d9c36a"
+  />
+
+  <!-- Tape tail -->
+  <path
+    d="
+      M419 174
+      C438 174 452 182 462 194
+    "
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <!-- Direction arrow -->
+  <path
+    d="
+      M345 110
+      C322 125 312 146 312 171
+    "
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="4"
+    stroke-linecap="round"
+    marker-end="url(#arrow-blue)"
+  />
+
+  <text
+    x="385"
+    y="42"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="#1e3a5f"
+  >
+    Measure around the midpoint of the shaft
+  </text>
+
+  <text
+    x="385"
+    y="244"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15"
+    fill="#657286"
+  >
+    Measure during a full erection at the midpoint of the shaft.
+  </text>
+
+  <text
+    x="385"
+    y="270"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14"
+    fill="#657286"
+  >
+    Keep the tape snug but do not compress the tissue.
+  </text>
+
+</svg>
