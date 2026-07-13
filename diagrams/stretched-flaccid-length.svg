@@ -1,0 +1,237 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 820 320"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Stretched flaccid length measurement</title>
+
+  <desc id="description">
+    Simplified technical diagram showing the flaccid penis gently stretched
+    horizontally and measured along the upper surface using the bone-pressed method.
+  </desc>
+
+  <defs>
+    <marker
+      id="arrow-blue"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0 L8 4 L0 8 Z" fill="#3f8fbf"/>
+    </marker>
+
+    <marker
+      id="arrow-yellow"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0 L8 4 L0 8 Z" fill="#d9c36a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect
+    x="1"
+    y="1"
+    width="818"
+    height="318"
+    rx="20"
+    fill="#f3f5f7"
+    stroke="#dce3e8"
+    stroke-width="2"
+  />
+
+  <!-- Body / pubic boundary -->
+  <path
+    d="
+      M150 76
+      C174 96 184 120 185 149
+      C186 180 178 210 158 238
+    "
+    fill="none"
+    stroke="#1e3a5f"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <!-- Pubic bone -->
+  <path
+    d="
+      M173 116
+      C182 134 183 156 175 178
+    "
+    fill="none"
+    stroke="#d9c36a"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+
+  <!-- Long stretched flaccid silhouette -->
+  <path
+    d="
+      M186 134
+      L585 134
+
+      C612 134 632 150 640 174
+
+      C632 198 612 214 585 214
+
+      L186 214
+    "
+    fill="none"
+    stroke="#1e3a5f"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Ruler -->
+  <rect
+    x="172"
+    y="84"
+    width="470"
+    height="34"
+    rx="5"
+    fill="#ffffff"
+    stroke="#1e3a5f"
+    stroke-width="4"
+  />
+
+  <!-- Ruler ticks -->
+  <g stroke="#3f8fbf" stroke-width="2.5">
+    <line x1="208" y1="84" x2="208" y2="100"/>
+    <line x1="244" y1="84" x2="244" y2="109"/>
+    <line x1="280" y1="84" x2="280" y2="100"/>
+    <line x1="316" y1="84" x2="316" y2="109"/>
+    <line x1="352" y1="84" x2="352" y2="100"/>
+    <line x1="388" y1="84" x2="388" y2="109"/>
+    <line x1="424" y1="84" x2="424" y2="100"/>
+    <line x1="460" y1="84" x2="460" y2="109"/>
+    <line x1="496" y1="84" x2="496" y2="100"/>
+    <line x1="532" y1="84" x2="532" y2="109"/>
+    <line x1="568" y1="84" x2="568" y2="100"/>
+    <line x1="604" y1="84" x2="604" y2="109"/>
+  </g>
+
+  <!-- Measurement line -->
+  <line
+    x1="176"
+    y1="52"
+    x2="640"
+    y2="52"
+    stroke="#d9c36a"
+    stroke-width="4"
+    stroke-linecap="round"
+    marker-end="url(#arrow-yellow)"
+  />
+
+  <text
+    x="408"
+    y="34"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="#1e3a5f"
+  >
+    Measure from the pubic bone to the tip
+  </text>
+
+  <!-- Stylised upper finger -->
+  <path
+    d="
+      M642 141
+      C655 135 670 138 677 148
+      C683 157 680 166 672 171
+      C664 176 654 176 644 172
+    "
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Stylised lower finger -->
+  <path
+    d="
+      M642 207
+      C655 213 670 210 677 200
+      C683 191 680 182 672 177
+      C664 172 654 172 644 176
+    "
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Small fingertip contact marks -->
+  <circle
+    cx="646"
+    cy="171"
+    r="4"
+    fill="#d9c36a"
+  />
+
+  <circle
+    cx="646"
+    cy="177"
+    r="4"
+    fill="#d9c36a"
+  />
+
+  <!-- Stretch arrow -->
+  <line
+    x1="690"
+    y1="174"
+    x2="765"
+    y2="174"
+    stroke="#3f8fbf"
+    stroke-width="4"
+    stroke-linecap="round"
+    marker-end="url(#arrow-blue)"
+  />
+
+  <text
+    x="726"
+    y="151"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="16"
+    font-weight="700"
+    fill="#3f8fbf"
+  >
+    Stretch gently
+  </text>
+
+  <!-- Method note -->
+  <text
+    x="410"
+    y="270"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15"
+    fill="#657286"
+  >
+    Hold just behind the tip and extend only to the maximum comfortable length.
+  </text>
+
+  <text
+    x="410"
+    y="294"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14"
+    fill="#657286"
+  >
+    Do not pull forcefully or continue if discomfort occurs.
+  </text>
+</svg>
