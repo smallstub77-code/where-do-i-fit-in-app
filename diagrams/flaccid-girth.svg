@@ -1,0 +1,159 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 760 300"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Flaccid girth measurement</title>
+
+  <desc id="description">
+    Simplified technical diagram showing the circumference of a flaccid penis
+    measured at the midpoint of the shaft using a flexible measuring tape.
+  </desc>
+
+  <defs>
+    <marker
+      id="arrow-blue"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0 L8 4 L0 8 Z" fill="#3f8fbf"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect
+    x="1"
+    y="1"
+    width="758"
+    height="298"
+    rx="20"
+    fill="#f3f5f7"
+    stroke="#dce3e8"
+    stroke-width="2"
+  />
+
+  <!-- Body / pubic boundary -->
+  <path
+    d="
+      M150 76
+      C174 96 184 120 185 149
+      C186 180 178 210 158 238
+    "
+    fill="none"
+    stroke="#1e3a5f"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <!-- Short flaccid silhouette -->
+  <path
+    d="
+      M186 132
+      L410 132
+
+      C437 132 457 148 465 172
+
+      C457 196 437 212 410 212
+
+      L186 212
+    "
+    fill="none"
+    stroke="#1e3a5f"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Mid-shaft guide -->
+  <line
+    x1="300"
+    y1="116"
+    x2="300"
+    y2="228"
+    stroke="#d9c36a"
+    stroke-width="3"
+    stroke-dasharray="7 7"
+  />
+
+  <!-- Flexible tape around midpoint -->
+  <ellipse
+    cx="300"
+    cy="172"
+    rx="34"
+    ry="62"
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="6"
+  />
+
+  <!-- Tape overlap / closure point -->
+  <circle
+    cx="334"
+    cy="172"
+    r="6"
+    fill="#d9c36a"
+  />
+
+  <!-- Small tape tail -->
+  <path
+    d="
+      M334 172
+      C354 172 367 180 377 192
+    "
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <!-- Direction arrow -->
+  <path
+    d="
+      M260 109
+      C238 124 228 145 228 170
+    "
+    fill="none"
+    stroke="#3f8fbf"
+    stroke-width="4"
+    stroke-linecap="round"
+    marker-end="url(#arrow-blue)"
+  />
+
+  <text
+    x="300"
+    y="42"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="#1e3a5f"
+  >
+    Measure around the midpoint of the shaft
+  </text>
+
+  <text
+    x="385"
+    y="236"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15"
+    fill="#657286"
+  >
+    Keep the tape snug but do not compress the tissue.
+  </text>
+
+  <text
+    x="380"
+    y="263"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14"
+    fill="#657286"
+  >
+    If no flexible tape is available, use a non-stretch string or strip of paper.
+  </text>
+</svg>
